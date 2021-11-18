@@ -65,3 +65,20 @@ if __name__ == '__main__':
     print('Work 15 years, monthly salary = %.2f' % linear_unit.predict([15]))
     print('Work 1.5 years, monthly salary = %.2f' % linear_unit.predict([1.5]))
     print('Work 6.3 years, monthly salary = %.2f' % linear_unit.predict([6.3]))
+# 报错1：
+# RuntimeError: matplotlib does not support generators as input
+# 翻译：RuntimeError：matplotlib不支持将生成器作为输入
+# 原因：map() 会根据提供的函数对指定序列做映射
+
+#报错2：
+# in <module> class LinearUnit(Perceptron): TypeError: module() takes at most 2 arguments (3 given)
+# python3在使用类继承时，遇到错误TypeError: module.init() takes at most 2 arguments (3 given)
+# https://blog.csdn.net/qq_41538097/article/details/108802048
+# 错误原因：此处想要导入类，如上代码所示只是导入了模块，Python的模块名与类名是在两个不同的名字空间中，初学者很容易将其弄混淆。
+    # python 类：用来描述具有相同的属性和方法的对象的集合。它定义了该集合中每个对象所共有的属性和方法。对象是类的实例
+    # python 模块：模块，在Python可理解为对应于一个文件。
+    # 根据上面代码"import Parent"，你想使用 import Parent 导入Parent 类，但 import Parent 只能导入模块，所以错误
+# 方法一
+# 使用正确方式导入类， import Parent from Parent (此操作就是导入Parent 模块中的 Parent 类)
+# 方法二
+# 修改 class Child(Parent): 代码为 class Child(Parent.Parent):，目的也是选中模块中的类
