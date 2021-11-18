@@ -1,18 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
-
-from perceptron import Perceptron
 from __future__ import print_function
 
+import matplotlib.pyplot
 
-#定义激活函数f
+from Perceptron import Perceptron
+
+# 定义激活函数f
 f = lambda x: x
+
 
 class LinearUnit(Perceptron):
     def __init__(self, input_num):
         '''初始化线性单元，设置输入参数的个数'''
-        # Perceptron.__init__(self, input_num, f)
-        Perceptron.__init__(self,input_num,f)
+        Perceptron.__init__(self, input_num, f)
 
 
 def get_training_dataset():
@@ -36,7 +37,7 @@ def train_linear_unit():
     # 训练，迭代10轮, 学习速率为0.01
     input_vecs, labels = get_training_dataset()
     lu.train(input_vecs, labels, 10, 0.01)
-    #返回训练好的线性单元
+    # 返回训练好的线性单元
     return lu
 
 
@@ -48,8 +49,8 @@ def plot(linear_unit):
     ax.scatter(map(lambda x: x[0], input_vecs), labels)
     weights = linear_unit.weights
     bias = linear_unit.bias
-    x = range(0,12,1)
-    y = map(lambda x:weights[0] * x + bias, x)
+    x = range(0, 12, 1)
+    y = map(lambda x: weights[0] * x + bias, x)
     ax.plot(x, y)
     plt.show()
 
@@ -64,4 +65,3 @@ if __name__ == '__main__':
     print('Work 15 years, monthly salary = %.2f' % linear_unit.predict([15]))
     print('Work 1.5 years, monthly salary = %.2f' % linear_unit.predict([1.5]))
     print('Work 6.3 years, monthly salary = %.2f' % linear_unit.predict([6.3]))
-    plot(linear_unit)
