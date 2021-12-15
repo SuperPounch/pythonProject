@@ -60,7 +60,7 @@ def color(img_gray):
     return img_color
 
 
-img_gray = to_gray('qq.jpg')
+img_gray = to_gray('IMG_2.jpg')
 img_color = color(img_gray)
 show(img_gray)
 show(img_color)
