@@ -28,10 +28,9 @@ retval = cv2.imwrite(文件地址, 文件名)
 版权声明：本文为CSDN博主「Eastmount」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/Eastmount/article/details/81748802
 '''
-'''
-Opencv像素处理
-1、读取像素
-'''
+
+# Opencv像素处理
+# 1、读取像素
 
 img=cv2.imread('/Users/lx/Downloads/灰色1.jpeg',cv2.IMREAD_GRAYSCALE)
 
