@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 import random
 
 # 向图片中添加椒盐噪声
-def salt_pepper_noise(image, prob):  # prob:盐噪声阈值，由用户自己决定
+def salt_pepper_noise(image, prob):  # prob:椒盐噪声阈值，由用户自己决定
     output = np.zeros(image.shape, np.uint8)
-    thres = 1 - prob  # 胡椒噪声阈值
+    thres = 1 - prob  # 椒盐噪声阈值
     for i in range(image.shape[0]):  # 遍历整个图片的灰度级
         for j in range(image.shape[1]):
             randomnum = random.random()  # 生成一个随机0-1之间的随机数
