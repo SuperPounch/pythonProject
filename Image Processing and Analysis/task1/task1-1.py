@@ -60,7 +60,8 @@ def color(img_gray):
     return img_color
 
 
-img_gray = to_gray('../photo/IMG_2.jpg')
+img_gray = to_gray('/Users/lx/PycharmProjects/pythonProject/Image Processing and Analysis/photo/灰色1.jpeg')
 img_color = color(img_gray)
+cv2.imwrite("灰1_彩.jpeg",img_color)
 show(img_gray)
 show(img_color)
