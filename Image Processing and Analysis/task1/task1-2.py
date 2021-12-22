@@ -47,7 +47,7 @@ def gasuss_noise(image, mean=0, var=0.001):         # mean : 均值，var : 方�
 
 
 if __name__ == "__main__":
-    image = cv2.imread('qq.jpg')
+    image = cv2.imread('/Users/lx/PycharmProjects/pythonProject/Image Processing and Analysis/photo/灰色1.jpeg')
 
     plt.subplot(3, 3, 1)
     plt.imshow(image)
@@ -56,6 +56,7 @@ if __name__ == "__main__":
 
     gauss_img = gasuss_noise(image)
     salt_img = salt_pepper_noise(image, 0.05)
+
     #高斯噪声
     plt.subplot(3, 3, 2)
     plt.imshow(gauss_img)
