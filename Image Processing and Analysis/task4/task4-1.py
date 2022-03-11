@@ -5,14 +5,14 @@ import cv2
 import matplotlib.pylab as plt
 import numpy as np
 
-image = Image.open("qq.jpg")
+image = Image.open("/Users/lx/PycharmProjects/pythonProject/Image Processing and Analysis/photo/灰花2.jpeg")
 enh_con = ImageEnhance.Contrast(image)
 contrast = 3
 image_contrasted = enh_con.enhance(contrast)
 #image_contrasted.show()
 image_contrasted.save("image_contrasted2.jpg")
 
-image = cv2.imread("qq.jpg", 0)
+image = cv2.imread("/Users/lx/PycharmProjects/pythonProject/Image Processing and Analysis/photo/灰花2.jpeg", 0)
 hist = cv2.calcHist([image], [0], None, [256], [-0.0001, 255.0])
 plt.figure(0)
 plt.plot(hist)

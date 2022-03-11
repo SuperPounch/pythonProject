@@ -16,7 +16,7 @@ def sobel_filter(image):
     return image_new
 
 if __name__ == "__main__":
-    img = plt.imread("/Users/lx/PycharmProjects/pythonProject/Image Processing and Analysis/photo/IMG_1.jpg")
+    img = plt.imread("/Users/lx/PycharmProjects/pythonProject/Image Processing and Analysis/photo/灰色2.jpeg")
 
     rgb_weight = [0.299, 0.587, 0.114]
     img_gray = np.dot(img, rgb_weight)

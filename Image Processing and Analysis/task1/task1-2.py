@@ -47,7 +47,7 @@ def gasuss_noise(image, mean=0, var=0.001):         # mean : 均值，var : 方�
 
 
 if __name__ == "__main__":
-    image = cv2.imread('/Users/lx/PycharmProjects/pythonProject/Image Processing and Analysis/photo/灰色1.jpeg')
+    image = cv2.imread('/Users/lx/PycharmProjects/pythonProject/Image Processing and Analysis/photo/灰树濑.jpeg')
 
     plt.subplot(3, 3, 1)
     plt.imshow(image)

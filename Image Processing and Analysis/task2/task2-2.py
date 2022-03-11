@@ -58,7 +58,7 @@ def block_img_dct2(img_f32):
     return img_dct_log2, new_img
 
 if __name__ == '__main__':
-    img_u8 = cv2.imread("qq.jpg", 0)
+    img_u8 = cv2.imread("/Users/lx/PycharmProjects/pythonProject/Image Processing and Analysis/photo/灰鹦鹉.png", 0)
     img_f32 = img_u8.astype(np.float)  # 数据类型转换 转换为浮点型
     img_dct_log, img_idct = whole_img_dct(img_f32)
     img_dct_log2, new_img = block_img_dct(img_f32.copy())
