@@ -10,6 +10,7 @@ def anlz_byte(src_byte):
             lsb = i
             #print("lsb="+str(lsb))
         wrk_byte = wrk_byte << 1
+    print("lsb="+str(lsb))
     return lsb_detected, lsb
 
 def lsb(x):
